@@ -10,4 +10,5 @@ The flags to capture when attacking this app are:
 1. Extract the name of any files created by other users.
 2. Extract the emails of any registered users.
 3. Successfully login as administrator and create a file.
+
 When starting this exercise, you will will have no known credentials and should not have knowledge of the code.
