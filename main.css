@@ -1,0 +1,41 @@
+.sign-in-wrapper {
+    width: 250px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.sign-in-form-top span {
+    font-size: 32px;
+}
+
+.loginbutton {
+    width: 100px;
+    height: 100px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 200px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-in-form-top {
+    text-align: center;
+}
+
+.log-input-left {
+    margin-left: 20px;
+}
+
+.all_user_files {
+    margin: 50px auto 50px auto;
+    width: 600px;
+}
