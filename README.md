@@ -1,5 +1,5 @@
 # WS21-SSE-A01-BrokenAccessControl
-When using XAMPP, copy the BrokenAccessControl folder into your htdocs directory. It is important, that the server will be reachable unter the server's address + /BrokenAccessControl, as the routing would not work otherwise. Also your Apache needs to have read/write access to the users subfolder, you might need to adjust the permissions here.
+When using XAMPP, copy the BrokenAccessControl folder into your htdocs directory. The directory structure should then contain [...]/htdocs/BrokenAccessControl/index.php. It is important, that the server will be reachable unter the server's address + /BrokenAccessControl, as the routing would not work otherwise. Also your Apache needs to have read/write access to the users subfolder, you might need to adjust the permissions here.
 
 You can also find a docker image here: https://hub.docker.com/r/fmlhsmannheim/ssews21/tags
 You can pull the file with the following command:
