@@ -6,11 +6,11 @@ $loginData = json_decode($loginJson, true);
 
 //Functions
 function get_file_link($filename) {
-	return 'http://'.$_SERVER['SERVER_NAME'].'/BrokenAccessControl/'.USER_ROUTE_ID.'/edit?file='.$filename;
+	return 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/BrokenAccessControl/'.USER_ROUTE_ID.'/edit?file='.$filename;
 }
 
 function get_home_link($userId) {
-	return 'http://'.$_SERVER['SERVER_NAME'].'/BrokenAccessControl/'.$userId.'/home';
+	return 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/BrokenAccessControl/'.$userId.'/home';
 }
 
 function try_create_file($newFilename) {
@@ -63,7 +63,7 @@ function try_delete_file($filename) {
 }
 
 //Access control
-$loginLink = 'http://'.$_SERVER['SERVER_NAME'].'/BrokenAccessControl/login';
+$loginLink = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/BrokenAccessControl/login';
 if (!defined('USER_ROUTE_ID') || !array_key_exists(USER_ROUTE_ID, $loginData)) {
 	//Accessing home without specifying userId -> redirect to own home or login
 	//Accessing home of non-existant user -> redirect to own home or login

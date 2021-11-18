@@ -2,7 +2,7 @@
 
 //Functions
 function get_home_link($userId) {
-	return 'http://'.$_SERVER['SERVER_NAME'].'/BrokenAccessControl/'.$userId.'/home';
+	return 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/BrokenAccessControl/'.$userId.'/home';
 }
 
 function get_file_location($filename) {
@@ -10,7 +10,7 @@ function get_file_location($filename) {
 }
 
 //Access control
-$loginLink = 'http://'.$_SERVER['SERVER_NAME'].'/BrokenAccessControl/login';
+$loginLink = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/BrokenAccessControl/login';
 
 // Block access if not logged in
 if (!array_key_exists('usrId', $_SESSION)) {
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" &&
     <script defer>
         function onlySendValid(event) {
             if (<?php
-                echo substr($fileDir, 0, strlen($usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID)) != $usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID;
+                echo (null == (substr($fileDir, 0, strlen($usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID)) != $usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID) ? 'false' : 'true');
                 //Client side validation: file is in current user subfolder
                 //This check should be implemented on serverside, redirecting to the home directory, if it does not return true
                 ?>) {

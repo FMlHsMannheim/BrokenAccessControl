@@ -52,7 +52,7 @@ function try_register() {
 		{
 			//User exists
 			return false;
-		}	
+		}
 	}
 
 	$newId = strval(intval($userId) + 1);
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 
 		if (try_register()) {
 			//Redirect to home after registration
-			header('Location: http://'.$_SERVER['SERVER_NAME'].'/BrokenAccessControl/'.$_SESSION["usrId"].'/home');
+			header('Location: http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/BrokenAccessControl/'.$_SESSION["usrId"].'/home');
 			die();
 		}
 		
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 
 		if (validate_login()) {
 			//Redirect to home after login
-			header('Location: http://'.$_SERVER['SERVER_NAME'].'/BrokenAccessControl/'.$_SESSION["usrId"].'/home');
+			header('Location: http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/BrokenAccessControl/'.$_SESSION["usrId"].'/home');
 			die();
 		}
 		
@@ -147,22 +147,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 			<p>SSE Gruppe A01</p>
 		</footer>
 	</body>
-    <!-- <script defer>
-		const registerButton = document.getElementById('registerButton');
-		const registerInput = document.getElementById('registerInput');
-
-        function setRegistrationValueBeforeSending(event) {
-            console.log("register button: " + registerButton.name);
-            console.log("submitter: " + event.submitter.name);
-			if (registerButton == event.submitter) {
-				registerInput.innerText = "true";
-			} else {
-				registerInput.innerText = "false";
-			}
-        }
-
-        let form = document.getElementById('loginForm');
-
-        form.addEventListener('submit', (event) => setRegistrationValueBeforeSending(event));
-    </script> -->
 </html>
