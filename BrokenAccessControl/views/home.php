@@ -117,6 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/BrokenAccessControl/main.css">
 	<title>
 		Home
 	</title>
@@ -153,13 +154,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 <body>
 	<header>
 		<h1>Home</h1>
+		<hr>
 	</header>
 	<main>
 		<div>
-			<a href="<?php echo $loginLink ?>">Logout</a>
+			<a class="logout" href="<?php echo $loginLink ?>">&#8592;Logout</a>
 		</div>
-		<h2>Documents</h2>
-		<div>
+		<div class="documents">
+		  <h2 style="text-decoration:underline">Documents</h2>
 			<div>
 				<table>
 				<?php foreach ($userFiles as $file) {
@@ -181,11 +183,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 			<br/>
 			<div>
 				<form method="post">
-					<div>
-						<label>File name:  
-							<input type="text" name="filename" placeholder="Required" required>
-						</label>
-						<input type="submit" value="Create file" margin="10,0">
+					<div class="newfiles">
+						<label for="newFilename" style="text-decoration:underline">New File name:</label>
+						<input id="newFilename" class="newfilename" type="text" name="filename" placeholder="Required" required>
+						
+						<input class="createfilebutton" type="submit" value="Create file &#8593;" margin="10,0">
 					</div>
 					<?php if (isset($errorMessage)) { echo '<div>'.$errorMessage.'</div>'; } ?>
 				</form>

@@ -69,11 +69,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" &&
         <link rel="stylesheet" href="../main.css">
     </head>
     <body>
-        <a href="<?php echo get_home_link($_SESSION["usrId"])?>">Back</a>
+        <a href="<?php echo get_home_link($_SESSION["usrId"])?>">Back &#8592;</a>
         <form id="fileForm" method="post">
             <textarea name="content" class="datei_textarea" rows="15" cols="80"><?php echo file_get_contents($filename); ?></textarea>
             <div>
-                <input type="submit" value="Save">
+                <input type="submit" value="Save &#10003;">
             </div>
         </form>
         <div id="errorDiv"></div>
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" &&
     <script defer>
         function onlySendValid(event) {
             if (<?php
-                echo (null == (substr($fileDir, 0, strlen($usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID)) != $usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID) ? 'false' : 'true');
+                echo (substr($fileDir, 0, strlen($usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID)) == $usersDir.DIRECTORY_SEPARATOR.USER_ROUTE_ID ? 'false' : 'true');
                 //Client side validation: file is in current user subfolder
                 //This check should be implemented on serverside, redirecting to the home directory, if it does not return true
                 ?>) {

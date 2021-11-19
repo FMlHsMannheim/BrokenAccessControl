@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 <html>
 	<head>
 		<title>Login</title>
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="/BrokenAccessControl/main.css">
 	</head>
 	<body class="sign-in-up">
 		<?php if (isset($errorMessage)) { echo '<div>'.$errorMessage.'</div>'; } ?>
@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 							</div>
 							<div>
 								<input class="loginbutton" type="submit" value="Login">
-								<input name="register" class="loginbutton" type="submit" value="Register">
+								<input class="registerbutton" name="register" type="submit" value="Register">
 							</div>
 						</form>
 					</div>
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
 		</div>
 
 		<footer>
-			<p>SSE Gruppe A01</p>
+			<p>SSE Gruppe A01 - Broken Access Control</p>
 		</footer>
 	</body>
 </html>

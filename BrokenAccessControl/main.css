@@ -1,30 +1,30 @@
 .sign-in-wrapper {
-    width: 250px;
-    margin-top: 100px;
+    width: 500px;
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
     background-color: lightgrey;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .sign-in-form-top span {
-    font-size: 32px;
+    font-size: 40px;
 }
 
-.loginbutton {
-    width: 100px;
-    height: 100px;
-    font-size: 18px;
-    margin-top: 30px;
-    margin-left: 70px;
-    margin-bottom: 20px;
+.loginbutton, .registerbutton {
+    width: 200px;
+    height: 40px;
+    font-size: 24px;
+    margin-left: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 input {
-    width: 200px;
-    font-size: 14px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 300px;
+    font-size: 18px;
+    margin-left: 75px;
+    margin-top: 10px;
 }
 
 .sign-in-form-top {
@@ -38,4 +38,29 @@ input {
 .all_user_files {
     margin: 50px auto 50px auto;
     width: 600px;
+}
+
+.logout{
+    text-decoration:none;
+    background-color: lightgrey;
+    color:black;
+    margin-top:20px;
+    padding:5px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.newfiles, .documents {
+    margin-top: 50px;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.createfilebutton {
+    width: 130px;
+    margin-left: 20px;
+}
+
+.newfilename {
+    margin-left: 20px;
 }
